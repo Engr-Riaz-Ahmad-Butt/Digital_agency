@@ -1,82 +1,80 @@
 
-import React,{ useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/header.css';
 
 const nav__links = [
-    {
-        path:'#home',
-        display: 'Home'
-    },
-    {
-        path:'#about',
-        display: 'About Us'
-    },
-    {
-        path:'#pricing-plane',
-        display: 'Services'
-    },
-    {
-        path: 'contactUs'
-    }
-
+    { path: '#home', display: 'Home' },
+    { path: '#about', display: 'About Us' },
+    { path: '#pricing-plane', display: 'Services' },
 ]
 
 const Header = () => {
-    
+
     const headerRed = useRef(null);
     const menuRef = useRef(null);
     const headerFunc = () => {
-        if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             headerRed.current.classList.add('sticky__header');
-        }else{
+        } else {
             headerRed.current.classList.remove('sticky__header');
         }
     }
 
-    useEffect (()=>{
+    useEffect(() => {
         window.addEventListener('scroll', headerFunc);
-        return ()=> window.removeEventListener('scroll', headerFunc);
-    },[]);
-    const menuToggle = () => menuRef.current.classList.toggle('active__menu');
+        return () => window.removeEventListener('scroll', headerFunc);
+    }, []);
 
-    const handleClick = e =>{
+    const menuToggle = () => {
+        if (!menuRef.current) return;
+        menuRef.current.classList.toggle('active__menu');
+    };
+
+    const handleClick = e => {
+        const href = e.currentTarget.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
         e.preventDefault();
 
-        const targetAttr = e.target.getAttribute('href');
-        const location = document.querySelector(targetAttr).offsetTop;
-        window.scrollTo({
-            left:0,
-            top:location - 80,
-        });
+        const targetEl = document.querySelector(href);
+        if (targetEl) {
+            const location = targetEl.offsetTop;
+            window.scrollTo({ left: 0, top: location - 80 });
+        }
+
+        // close mobile menu after navigating
+        if (menuRef.current && menuRef.current.classList.contains('active__menu')) {
+            menuRef.current.classList.remove('active__menu');
+        }
     };
 
     return (
-    <header className='header' ref={headerRed}>
-        <div className='container'>
-            <div className='nav__wrapper'>
-                <div className='logo'>
-                    <h2 style={{color:"#FED105", fontSize:'35px'}}>Dig1Tize</h2>
-                </div>
+        <header className='header' ref={headerRed}>
+            <div className='container'>
+                <div className='nav__wrapper'>
+                    <div className='logo'>
+                        <h2 className='logo-text'>RB Digital</h2>
+                    </div>
 
-                <div className='navigation' ref={menuRef} onClick={menuToggle}>
-                    <ul className='menu'>
-                        {
-                            nav__links.map((item, index) => (
-                                <li className='nav__item' key={index}><a onClick={handleClick} href={item.path}>{item.display}</a></li>
-                            ))
-                        }
-                    </ul>
-                </div>
+                    <div className='navigation' ref={menuRef}>
+                        <ul className='menu'>
+                            {
+                                nav__links.map((item, index) => (
+                                    <li className='nav__item' key={index}><a className={item.path === '#contact' ? 'menu-contact' : ''} onClick={handleClick} href={item.path}>{item.display}</a></li>
+                                ))
+                            }
+                        </ul>
+                    </div>
 
-                {/*=========nav right========= */}
-                <div className='nav__right'>
-                        <button className='register__btn' style={{fontWeight:'600'}}><a href='#contact'>Contact Us</a></button>
+                    {/*=========nav right========= */}
+                    <div className='nav__right'>
+                        <Link to='/contactUs' className='register__btn' style={{ fontWeight: '600' }}>Contact Us</Link>
                         <span className='mobile__menu' onClick={menuToggle}><i className='ri-menu-line'></i></span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-  )
+        </header>
+    )
 }
 
 export default Header;

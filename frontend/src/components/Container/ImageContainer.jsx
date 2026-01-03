@@ -11,8 +11,8 @@ import image6 from '../../assets/img/icons8-code-100 2.png';
 const ImageContainer = ({ imageUrl, title, description }) => {
   return (
     <div className="image-container">
-      
-      <img src={imageUrl} alt={title} className="image" style={{width:'55%',height:'50%'}}/>
+
+      <img src={imageUrl} alt={title} className="image" />
       <div className="image-details">
         <h3>{title}</h3>
         <p>{description}</p>
@@ -23,11 +23,7 @@ const ImageContainer = ({ imageUrl, title, description }) => {
 
 const ImageGallery = () => {
   return (
-    <>
-     
-     
-    <div className="gallery" style={{marginTop:'0%'}}>
-      
+    <div className="gallery" style={{ marginTop: '0%' }}>
       <ImageContainer
         imageUrl={image1}
         title="Social Media Marketing"
@@ -43,16 +39,11 @@ const ImageGallery = () => {
         title="Videography"
         description="Captivating visuals that bring your brand story to life."
       />
-      
-      
-    </div>
-    <div className="gallery1" style={{marginTop:'5%'}}>
-    <ImageContainer
+      <ImageContainer
         imageUrl={image4}
         title="Data Analytics"
         description="Actionable insights that steer your business towards success."
       />
-    
       <ImageContainer
         imageUrl={image5}
         title="Email Marketing"
@@ -64,7 +55,6 @@ const ImageGallery = () => {
         description="Boost your online presence with optimized websites."
       />
     </div>
-     </>
   );
 };
 

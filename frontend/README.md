@@ -1,6 +1,6 @@
-# DigIT-Website-ReactJs
+# RB-Digital-Solutions-Website
 
-Welcome to the DigIT website! This is a complete responsive website built using React.js. It showcases various sections like About Us, Services, Home, and Contact. The website utilizes two types of navigation - one-page navigation and routing.
+Welcome to the RB Digital Solutions website! This is a complete responsive website built using React.js. It showcases various sections like About Us, Services, Home, and Contact. The website utilizes two types of navigation - one-page navigation and routing.
 
 # Table of Contents
 Introduction
@@ -12,7 +12,7 @@ Usage
 
 ### `Introduction`
 
-The DigIT website is a modern and professional website designed to present information about our company and the services we offer. With its sleek design and user-friendly interface, it aims to provide a seamless browsing experience to all users. The website is fully responsive, ensuring that it looks great on various devices, from desktops to mobiles.
+The RB Digital Solutions website is a modern and professional website designed to present information about our company and the services we offer. With its sleek design and user-friendly interface, it aims to provide a seamless browsing experience to all users. The website is fully responsive, ensuring that it looks great on various devices, from desktops to mobiles.
 
 ### `Features`
 
@@ -36,13 +36,19 @@ Sections:
 
 ### `Technologies Used`
 
-The DigIT website is built using the following technologies:
+The RB Digital Solutions website is built using the following technologies:
 
-1. React.js: The primary JavaScript library used for building the user interface and managing the website's state.
-2. React Router: Used for implementing routing within the website and enabling navigation through distinct URLs.
-3. HTML5: The structure of the website is created using the latest HTML standards.
-4. CSS3: The website is styled using CSS3, making it visually appealing and ensuring a smooth user experience.
-5. Bootstrap (optional): If applicable, mention if you used Bootstrap or any other CSS framework to enhance the website's responsiveness and layout.
+1. **React.js** (v18.2.0): The primary JavaScript library used for building the user interface.
+2. **React Router** (v6.14.2): Used for implementing routing and navigation.
+3. **Bootstrap 5 & Reactstrap**: For responsive layout and UI components.
+4. **EmailJS** (@emailjs/browser): For handling email functionality directly from the client.
+5. **Axios**: For making HTTP requests.
+6. **AOS** (Animate On Scroll): For adding scroll animations to elements.
+7. **Framer Motion**: For advanced animations and transitions.
+8. **Swiper**: For touch-enabled sliders and carousels.
+9. **Remix Icon**: A comprehensive icon set.
+10. **Google Maps** (google-maps-react): Integration of Google Maps for location display.
+11. **Nodemailer**: For backend email sending capabilities.
 
 ### `Installation`
 

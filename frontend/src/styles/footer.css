@@ -1,42 +1,96 @@
 .footer-container {
-    padding: 90px 20px;
-    text-align: center;
-    margin: 3%;
-    border-radius: 20px;
-  }
-  
+  padding: 90px 20px;
+  text-align: center;
+  margin: 3% auto;
+  width: 94%;
+  border-radius: 20px;
+}
+
+.footer-title {
+  font-family: 'Balsamiq Sans';
+  font-weight: 700;
+  color: white;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.paragraph-text {
+  font-family: 'Balsamiq Sans';
+  font-weight: 700;
+  color: white;
+  font-size: 22px;
+  text-align: center !important;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 24px;
+}
+
+.contact-button {
+  padding: 10px 20px;
+  font-family: 'Balsamiq Sans';
+  font-weight: 700;
+  background-color: white;
+  color: #fed105;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 2%;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, border-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #fed105;
+  color: white;
+  border-color: white;
+  /* Keep white border for visibility against yellow footer? Or make it match? 
+                         Footer bg is #fed105. Button becomes #fed105. 
+                         It needs a WHITE border to be visible. */
+  transform: scale(1.1);
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  padding: 20px;
+  border-top: 3px solid #fed105;
+  box-shadow: 0 -4px 12px rgba(254, 209, 21, 0.1);
+}
+
+.copyright-text {
+  color: #fed105;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  font-family: 'Balsamiq Sans';
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.copyright-text::before {
+  content: '✨';
+  margin-right: 8px;
+}
+
+.copyright-text::after {
+  content: '✨';
+  margin-left: 8px;
+}
+
+@media only screen and (max-width: 768px) {
   .footer-title {
-    font-family: 'Balsamiq Sans';
-    font-weight: 700;
-    color: white;
-    font-size: 64px;
-    margin-bottom: 20px;
+    font-size: 32px;
   }
   
-  .paragraph-text {
-    font-family: 'Balsamiq Sans';
-    font-weight: 700;
-    color: white;
-    font-size: 14px;
-    text-align: center !important;
-    
+  .copyright-text {
+    font-size: 13px;
   }
   
-  .contact-button {
-    padding: 10px 20px;
-    font-family: 'Balsamiq Sans';
-    font-weight: 700;
-    background-color: white;
-    color: #fed105;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 2%;
-    transition: background-color 0.3s;
+  .copyright-text::before,
+  .copyright-text::after {
+    content: '';
+    margin: 0;
   }
-  
-  .contact-button:hover {
-    background-color: #000000;
-    color: white;
-  }
-  
+}

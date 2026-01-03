@@ -35,7 +35,7 @@ const Pricing = () => {
 
                             </ul>
 
-                            <button className='register__btn' style={{ background: '#FED105', color: 'black', borderRadius: '20px', marginTop: '20%' }}>Contact Now</button>
+                            <button className='register__btn primary-btn' style={{ marginTop: '20%' }}>Contact Now</button>
 
                         </div>
                     </div>
@@ -57,7 +57,7 @@ const Pricing = () => {
 
                             </ul>
 
-                            <button className='register__btn' style={{ background: 'white', color: '#FED105', fontWeight: 'bold', borderRadius: '20px', marginTop: "20%" }}>Contact Now</button>
+                            <button className='register__btn secondary-btn' style={{ marginTop: "20%" }}>Contact Now</button>
 
                         </div>
                     </div>
@@ -80,7 +80,7 @@ const Pricing = () => {
 
                             </ul>
 
-                            <button className='register__btn' style={{ background: '#FED105', color: 'black', borderRadius: '20px', marginTop: '12%' }}>Contact Now</button>
+                            <button className='register__btn primary-btn' style={{ marginTop: '12%' }}>Contact Now</button>
 
                         </div>
                     </div>

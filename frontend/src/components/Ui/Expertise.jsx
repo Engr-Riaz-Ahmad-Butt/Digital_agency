@@ -7,24 +7,24 @@ import WordPress from '../../assets/img/WordPress-logo 2.png';
 import '../../styles/start.css'
 const Expertise = () => {
   return (
-   
+
     <div id='expertise'>
-    <section>
-      <Container>
-        <Row>
-        <h1  style={{fontFamily:'Balsamiq Sans, cursive', color:'#fed105',alignItems:"center",justifyContent:'center', fontSize:'50px', fontWeight:'700',textAlign:'center'}} className='expert_h1'>Causes That Trust Our Expertise</h1>
-        <Col lg='3' md='4'>
-            <div  data-aos='zoom-in' data-aos-duration='1500' className='brands'>
-              <img src={Oracle} alt=''/>
-              <img src={Segment} alt=''/>
-              <img src={Monday} alt=''/>
-              <img src={WordPress} alt=''/>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-   
+      <section>
+        <Container>
+          <Row className="justify-content-center">
+            <h1 style={{ fontFamily: 'Balsamiq Sans, cursive', color: '#fed105', alignItems: "center", justifyContent: 'center', fontSize: '50px', fontWeight: '700', textAlign: 'center' }} className='expert_h1'>Causes That Trust Our Expertise</h1>
+            <Col lg='3' md='4'>
+              <div data-aos='zoom-in' data-aos-duration='1500' className='brands'>
+                <img src={Oracle} alt='' />
+                <img src={Segment} alt='' />
+                <img src={Monday} alt='' />
+                <img src={WordPress} alt='' />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
     </div>
   )
 }

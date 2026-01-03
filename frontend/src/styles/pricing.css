@@ -1,101 +1,157 @@
-
-.pricing__top{
+.pricing__top {
     text-align: center;
 
 }
-.pricing__top h2{
+
+.pricing__top h2 {
     margin-top: 5%;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-.pricing__top h2 span{
+
+.pricing__top h2 span {
     font-size: 2.4rem;
     border-bottom: 3px solid rgb(153, 14, 14);
 }
-.pricing__top p{
+
+.pricing__top p {
     font-size: 1.1rem;
     color: var(--heading-color);
     line-height: 28px;
     margin-bottom: 50px;
 }
 
-.pricing__wrapper{
+.pricing__wrapper {
     display: flex;
     column-gap: 2rem;
-   
+
 }
 
-.pricing__item{
+.pricing__item {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius: 10%;
     width: 33%;
     background: #fff;
+    display: flex;
+    flex-direction: column;
 }
-.pricing__card-top{
+
+.pricing__card-top {
     padding: 20px;
     border-bottom: 1px solid #d3cef2;
 }
 
-.pricing__card-top h2{
+.pricing__card-top h2 {
     font-size: 1.5rem;
     margin-bottom: .9rem;
 
 }
 
-.pricing__card-top .pricing{
+.pricing__card-top .pricing {
     font-size: 1.4rem;
 
 }
 
-.pricing__card-top .pricing span{
+.pricing__card-top .pricing span {
     font-size: 1rem;
     color: #666;
 }
 
-.pricing__item .services{
+.pricing__item .services {
     padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.pricing__item .services ul li{
+.pricing__item .services ul {
+    flex: 1;
+}
+
+.pricing__item .services ul li {
     display: flex;
     align-items: center;
     column-gap: 1.5rem;
     color: #666;
     line-height: 28px;
 }
-.pricing__item .services ul li i{
+
+.pricing__item .services ul li i {
     font-size: 0.7rem;
 }
-.services{
+
+.services {
     text-align: center;
 }
-.services button{
-    margin-top: 50px;
-    padding: 5% 2dvi;
+
+.services button {
+    margin-top: auto;
+    padding: 10px 30px;
+    font-family: 'Balsamiq Sans', cursive;
+    border: 2px solid transparent;
+    /* Reserve space for border to prevent layout shift */
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.pricing__item-02 .pricing__card-top{
+.primary-btn {
+    background: #FED105;
+    color: white;
+    border-color: #FED105;
+    border-radius: 20px;
+}
+
+.primary-btn:hover {
+    background: white !important;
+    color: #FED105 !important;
+    border-color: #FED105 !important;
+    transform: scale(1.1);
+}
+
+.secondary-btn {
+    background: white;
+    color: #FED105;
+    border-color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.secondary-btn:hover {
+    background: #FED105 !important;
+    color: white !important;
+    border-color: #FED105 !important;
+    transform: scale(1.1);
+}
+
+.pricing__item-02 .pricing__card-top {
     border-radius: 10px 10px 0px 0px;
 }
-.pricing__item-02 .pricing__card-top h2{
-    
+
+.pricing__item-02 .pricing__card-top h2 {
+
     color: #fff;
     font-weight: 500;
 }
-.pricing__item-02 .pricing__card-top h2 span{
+
+.pricing__item-02 .pricing__card-top h2 span {
     color: #d3cef2;
 }
-.pricing__item-02 .services ul li span i{
+
+.pricing__item-02 .services ul li span i {
     color: rgb(156, 11, 11);
 
 }
+
 @media only screen and (max-width:320px) {
-      .pricing__wrapper{
+    .pricing__wrapper {
         display: flex;
         flex-direction: column;
-        
+
     }
-    .pricing__item{
+
+    .pricing__item {
         width: 100%;
         margin-top: 1%;
     }
@@ -108,65 +164,78 @@
         flex-direction: column;
         text-align: center;
     }
+
     .pricing__icon {
         width: 50%;
         margin: auto;
     }
+
     .pricing__item-title {
         margin-top: 10px;
     }
+
     .service-item {
         font-size: 16px;
     }
+
     .service-description {
         font-size: 14px;
         width: 80%;
         margin: 0 auto;
     }
+
     .register__btn {
         margin-top: 10%;
     }
 
-    .pricing__wrapper{
+    .pricing__wrapper {
         display: flex;
         flex-direction: column;
         gap: 30px;
 
     }
-    .pricing__item{
+
+    .pricing__item {
         width: 100%;
     }
-    .pricing__card-top{
+
+    .pricing__card-top {
         display: flex;
         flex-direction: row;
     }
-    
+
 }
 
 @media screen and (max-width: 480px) {
     .pricing__item-title {
         font-size: 20px;
     }
+
     .service-item {
         font-size: 14px;
     }
+
     .service-description {
         font-size: 12px;
     }
+
     .register__btn {
         margin-top: 15%;
     }
-    .pricing__wrapper{
+
+    .pricing__wrapper {
         display: flex;
         flex-direction: column;
         gap: 30px;
 
     }
-    .pricing__item{
+
+    .pricing__item {
         width: 100%;
     }
-    .pricing__card-top{
-display: flex;
-flex-direction: row;
+
+    .pricing__card-top {
+        display: flex;
+        flex-direction: row;
     }
 }

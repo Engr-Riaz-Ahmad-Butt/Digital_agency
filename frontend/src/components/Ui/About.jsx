@@ -21,9 +21,9 @@ const About = () => {
 
               <div className='hero__content' data-aos='fade-up' data-aos-duration='2000'>
 
-                <h2 style={{ fontFamily: 'Balsamiq Sans, cursive', color: '#fed105', alignItems: "center", justifyContent: 'center', marginTop: '15%' }}>Welcome to Dig1Tize</h2>
+                <h2 style={{ fontFamily: 'Balsamiq Sans, cursive', color: '#fed105', alignItems: "center", justifyContent: 'center', marginTop: '15%' }}>Welcome to RB Digital Solutions</h2>
                 <p style={{ fontFamily: 'Balsamiq Sans, cursive', fontSize: '20px', color: '#fed105' }}>Where Creativity Meets Technology!</p>
-                <p style={{ fontFamily: 'Balsamiq Sans, cursive', color: '#808080' }}>At Dig1Tize, we breathe life into digital visions. With a perfect blend of creativity and technical prowess, we transform ideas into captivating realities. Our client-centric approach fuels our passion for innovation, ensuring that every project we undertake is unique and exceptional. </p>
+                <p style={{ fontFamily: 'Balsamiq Sans, cursive', color: '#808080' }}>At RB Digital Solutions, we breathe life into digital visions. With a perfect blend of creativity and technical prowess, we transform ideas into captivating realities. Our client-centric approach fuels our passion for innovation, ensuring that every project we undertake is unique and exceptional. </p>
 
               </div>
             </Col>
